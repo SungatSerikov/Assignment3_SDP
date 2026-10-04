@@ -25,6 +25,15 @@ public class Main {
                 "RADIO power=ON volume=5");
 
         checkRuntimeSwitch();
+
+        checkExecution("T6", "BasicRemote + ProjectorDevice",
+                new BasicRemote("BASIC-1", new ProjectorDevice()),
+                "PROJECTOR power=ON volume=30");
+
+        checkExecution("T7", "QuietRemote + ProjectorDevice",
+                new QuietRemote("QUIET-1", new ProjectorDevice()),
+                "PROJECTOR power=ON volume=5");
+
         System.out.println("SUMMARY: " + passedChecks
                 + "/" + totalChecks + " PASS");
     }

@@ -6,3 +6,4 @@ src/RadioDevice.java
 src/Remote.java
 src/BasicRemote.java
 src/QuietRemote.java
+src/ProjectorDevice.java
