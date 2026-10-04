@@ -30,6 +30,13 @@ Each remote stores an ID, a volume preset, and a reference to the `Device` inter
 
 `AbstractDevice` contains the common device state and output logic.
 
+## Important code locations
+
+- **Bridge field:** `implementation` of type `Device` in `src/Remote.java`. The constructor receives the device.
+- **Delegation:** `execute()` in `src/Remote.java` calls `implementation.applySettings(true, volumePreset)`.
+- **Runtime switching:** `setImplementation(Device implementation)` in `src/Remote.java` replaces the device reference.
+- **T5 check:** `checkRuntimeSwitch()` in `src/Main.java` checks object identity, unchanged remote data, and the results before and after switching.
+
 ## Build and run
 
 Requires JDK 17. No external dependencies are needed.
