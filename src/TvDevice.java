@@ -1,4 +1,5 @@
-package PACKAGE_NAME;
-
-public class TvDevice {
+public class TvDevice extends AbstractDevice {
+    public TvDevice() {
+        super("TV");
+    }
 }

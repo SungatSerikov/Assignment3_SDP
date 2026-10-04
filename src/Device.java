@@ -1,4 +1,3 @@
-package PACKAGE_NAME;
-
-public class Device {
+public interface Device {
+    String applySettings(boolean poweredOn, int volume);
 }

@@ -1,4 +1,5 @@
-package PACKAGE_NAME;
-
-public class RadioDevice {
+public class RadioDevice extends AbstractDevice {
+    public RadioDevice() {
+        super("RADIO");
+    }
 }
